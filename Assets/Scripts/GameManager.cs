@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject panelLevelCompleted;
     public GameObject panelGameOver;
 
+    public GameObject[] levels;
+
     public static GameManager Instance { get; private set; }
 
     public enum State { MENU, INIT, PLAY, LEVELCOMPLETED, LOADLEVEL, GAMEOVER }
@@ -28,8 +30,9 @@ public class GameManager : MonoBehaviour
     public int Score
     {
         get { return _score; }
-        set { _score = value; }
+        set{ _score = value;
             scoreText.text = "Score: " + _score;
+        }
     }
 
     private int _balls;
@@ -57,6 +60,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+		Instance = this;
         SwitchState(State.MENU);
     }
 
