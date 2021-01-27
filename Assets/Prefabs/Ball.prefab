@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1327506692674405194}
   - component: {fileID: 1327506692674405195}
   - component: {fileID: 1327506692674405192}
-  - component: {fileID: 1327506692674405193}
   - component: {fileID: 1327506692674405197}
   - component: {fileID: 1327506692674405196}
+  - component: {fileID: 7055031895151176416}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1327506692674405190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,19 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &1327506692674405193
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327506692674405190}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1327506692674405197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -123,3 +110,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45270f8c150bad445b821df82be8a379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &7055031895151176416
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327506692674405190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
