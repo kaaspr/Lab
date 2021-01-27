@@ -25,6 +25,11 @@ public class GameManager : MonoBehaviour
     public enum State { MENU, INIT, PLAY, LEVELCOMPLETED, LOADLEVEL, GAMEOVER }
     State _state;
 
+    GameObject _currentBall;
+    GameObject _currentLevel;
+    bool _isSwitchingState;
+
+
     private int _score;
 
     public int Score
@@ -64,10 +69,19 @@ public class GameManager : MonoBehaviour
         SwitchState(State.MENU);
     }
 
-    public void SwitchState(State newState)
+    public void SwitchState(State newState, float delay = 0)
     {
+        StartCoroutine(SwitchDelay(newState, delay));
+    }
+
+    IEnumerator SwitchDelay(State newState, float delay)
+    {
+        _isSwitchingState = true;
+        yield return new WaitForSeconds(delay);
         EndState();
+        _state = newState;
         BeginState(newState);
+        _isSwitchingState = false;
     }
  
     void BeginState(State newState)
@@ -91,6 +105,15 @@ public class GameManager : MonoBehaviour
                 panelLevelCompleted.SetActive(true);
                 break;
             case State.LOADLEVEL:
+                if (Level >= levels.Length)
+                {
+                    SwitchState(State.GAMEOVER);
+                }
+                else
+                {
+                    _currentLevel = Instantiate(levels[Level]);
+                    SwitchState(State.PLAY);
+                }
                 break;
             case State.GAMEOVER:
                 panelGameOver.SetActive(true);
@@ -108,6 +131,17 @@ public class GameManager : MonoBehaviour
             case State.INIT:
                 break;
             case State.PLAY:
+                if (_currentBall == null)
+                {
+                    if (Balls > 0)
+                    {
+                        _currentBall = Instantiate(ballPrefab);
+                    }
+                    else
+                    {
+                        SwitchState(State.GAMEOVER);
+                    }
+                }
                 break;
             case State.LEVELCOMPLETED:
                 break;
