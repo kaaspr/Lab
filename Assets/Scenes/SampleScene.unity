@@ -708,7 +708,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069141438}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -996,7 +996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -80}
+  m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377507015
@@ -6541,7 +6541,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.06424402, g: 0.027367385, b: 0.14150941, a: 0}
+  m_BackGroundColor: {r: 0.008071862, g: 0, b: 0.18867922, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -6630,7 +6630,7 @@ MonoBehaviour:
   panelLevelCompleted: {fileID: 470534658}
   panelGameOver: {fileID: 1609504385}
   levels:
-  - {fileID: 7985984050804646982, guid: b111ac8bd99c9b342b1def48ce60d611, type: 3}
+  - {fileID: 8175874442065302409, guid: 29c2c24d3b4675a48a127e0cd34108ef, type: 3}
   - {fileID: 7985984050804646982, guid: 73b9f49c595df96418433ea5f47c403c, type: 3}
   - {fileID: 7985984050804646982, guid: 73b9f49c595df96418433ea5f47c403c, type: 3}
 --- !u!4 &2060691702

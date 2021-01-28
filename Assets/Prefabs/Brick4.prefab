@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7641810686458138487}
   - component: {fileID: 7641810686458138486}
   - component: {fileID: 5841853847300843820}
-  - component: {fileID: -2804908155370546773}
+  - component: {fileID: -6997393172717525928}
   m_Layer: 0
-  m_Name: Brick1v1
+  m_Name: Brick2v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8a76e6ca0b9831a4eb5a814732a8705f, type: 2}
+  - {fileID: 2100000, guid: f2edc361bb146f94087e79201371b545, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,11 +93,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec89287e16190ef40802334df576883b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hits: 1
-  points: 25
+  hits: 2
+  points: 150
   rotator: {x: 40, y: 0, z: 0}
   hitMaterial: {fileID: 2100000, guid: 67c435dd16014144db326c2b49d9fde9, type: 2}
---- !u!65 &-2804908155370546773
+--- !u!65 &-6997393172717525928
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
