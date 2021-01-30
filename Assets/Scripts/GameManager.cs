@@ -37,8 +37,7 @@ public class GameManager : MonoBehaviour
     {
         get { return _score; }
         set{ _score = value;
-            scoreText.text = "Score: " + _score;
-        }
+            scoreText.text = "Score: " + _score; }
     }
 
     private int _balls;
@@ -47,8 +46,7 @@ public class GameManager : MonoBehaviour
     {
         get { return _balls; }
         set { _balls = value;
-            ballsText.text = "BALLS: " + _balls;
-        }
+            ballsText.text = "BALLS: " + _balls; }
             
     }
 
@@ -58,8 +56,7 @@ public class GameManager : MonoBehaviour
     {
         get { return _level; }
         set { _level = value;
-            levelText.text = "Level: " + _level;
-        }
+            levelText.text = "Level: " + _level; }
     }
 
 
@@ -72,6 +69,7 @@ public class GameManager : MonoBehaviour
     {
 		Instance = this;
         SwitchState(State.MENU);
+        //PlayerPrefs.DeleteKey("highscore");
     }
 
     public void SwitchState(State newState, float delay = 0)

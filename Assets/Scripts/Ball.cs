@@ -8,11 +8,13 @@ public class Ball : MonoBehaviour
     Rigidbody _rigidbody;
     Vector3 _velocity;
     Renderer _renderer;
+    AudioSource _smallhit;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _renderer = GetComponent<Renderer>();
+        _smallhit = GetComponent<AudioSource>();
         Invoke("Launch", 0.5f);
     }
 
@@ -28,14 +30,18 @@ public class Ball : MonoBehaviour
 
         if (!_renderer.isVisible)
         {
+          
+
             GameManager.Instance.Balls--;
             Destroy(gameObject);
         }
+        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        _smallhit.Play();
         _rigidbody.velocity = Vector3.Reflect(_velocity, collision.contacts[0].normal);
     }
-
+    
 }
